@@ -21,7 +21,7 @@
         return numbersValidator(
           value,
           dataset.validatorMin,
-          dataset.valdatorMax
+          dataset.validatorMax
         );
       case "letters":
         var reg = new RegExp("^[a-zа-яё]+$", "i");
@@ -91,13 +91,12 @@
           input.classList.add(settings.inputErrorClass);
           error = true;
         }
-
-        if (error) {
-          form.classList.add(settings.formInvalidClass);
-        } else {
-          form.classList.add(settings.formValidClass);
-        }
       });
+      if (error) {
+        form.classList.add(settings.formInvalidClass);
+      } else {
+        form.classList.add(settings.formValidClass);
+      }
     });
   };
 })();
